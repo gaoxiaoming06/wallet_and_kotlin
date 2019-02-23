@@ -1,0 +1,145 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.xlqianbao.and"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 7
+        versionName "1.2.0"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "c08f8cb48c726e64f43e24db", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "default", //用户渠道统计的渠道名称
+        ]
+    }
+
+    //签名配置
+    signingConfigs {
+        config {
+            storeFile file("../xlqianbao.jks")
+            storePassword "xlqianbao"
+            keyAlias "xlqianbao"
+            keyPassword "xlqianbao"
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 签名
+            signingConfig signingConfigs.config
+            // 线下地址
+            buildConfigField("String", "HOST", "\"http://xiaolan.test.twotiger.net:248/\"");
+        }
+        alpha {
+            // 签名
+            signingConfig signingConfigs.config
+            // 混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // ZipAlignEnabled优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            // 线下地址
+            buildConfigField("String", "HOST", "\"http://xiaolan.test.twotiger.net:248/\"");
+        }
+        release {
+            //继承alpha配置
+            initWith(alpha)
+            // 线上地址
+            buildConfigField("String", "HOST", "\"https://app.xlqianbao.com/\"");
+        }
+        //用于线上与线下包共存使用，此包不支持分享
+        release_with_alpha {
+            //继承alpha配置
+            initWith(alpha)
+            //包名后缀
+            applicationIdSuffix '.alpha'
+            // 线上地址
+            buildConfigField("String", "HOST", "\"https://app.xlqianbao.com/\"");
+        }
+    }
+
+    //关闭lint检查
+    lintOptions {
+        disable "ResourceType"
+        abortOnError false
+    }
+
+    //jniLibs目录指向libs目录
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/kotlin']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    flavorDimensions 'dev'
+    productFlavors {
+        dev {
+            dimension 'dev'
+        }
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [CHANNEL_VALUE: name]
+        }
+    }
+
+    //自定义输出apk命名规范
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "and_base_${variant.buildType.name}.apk"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "com.android.support:appcompat-v7:$support_version"
+    //RxJava RxAndroid
+    compile "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    compile "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+//    compile([
+//            'com.twotiger.library:common-utils:4',
+//            'com.twotiger.library:pulltorefresh:1',
+//            'com.twotiger.library:looplayout:8',
+//            'com.twotiger.library:version-update:2'
+//    ])
+    //Retrofit2
+    compile([
+            //okhttp3 logging
+            "com.squareup.okhttp3:logging-interceptor:$okhttp_version",
+            "com.squareup.retrofit2:retrofit:$retrofit_version",
+            "com.squareup.retrofit2:converter-gson:$retrofit_version",
+            "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    ])
+    //fastjson
+    compile "com.alibaba:fastjson:$fastjson_version"
+    //Glide
+    compile "com.github.bumptech.glide:glide:$glide_version"
+    //沉浸式状态栏
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile 'com.google.code.gson:gson:2.8.1'
+    implementation project(':keyboard')
+    //jpush
+    compile([
+            'cn.jiguang.sdk:jpush:3.0.8',
+            'cn.jiguang.sdk:jcore:1.1.6'
+    ])
+    implementation project(':livenesslib')
+    implementation project(':IDCardLib')
+    implementation project(':contactselector')
+    //微信分享
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.4.0'
+}

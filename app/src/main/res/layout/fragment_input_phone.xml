@@ -1,0 +1,172 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_root"
+    android:background="@color/xl_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/xl_black">
+
+        <include layout="@layout/include_title_bar" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingTop="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zhuce_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="小蓝钱包"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_line_frame_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_shouji" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#ccc" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            style="?android:attr/textViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint=" 请输入手机号"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="13"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textCursorDrawable="@drawable/shape_edittext_cursor_drawable"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/showClear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="16dp"
+            android:src="@drawable/icon_close" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_code"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_line_frame_bg"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_tuanpian" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#ccc" />
+
+        <EditText
+            android:id="@+id/et_code"
+            style="?android:attr/textViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint=" 请输入图形验证码"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="4"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textCursorDrawable="@drawable/shape_edittext_cursor_drawable"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/iv_code"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_btn_code"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:drawableLeft="@drawable/icon_tishi"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/xl_gray"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btn_next_step"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/selector_btn"
+        android:enabled="false"
+        android:text="下一步"
+        android:textColor="@drawable/selector_btn_text_white"
+        android:textSize="16sp" />
+</LinearLayout>

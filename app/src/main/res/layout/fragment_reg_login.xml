@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:id="@+id/ll_root"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_send_code"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="短信验证码已发送至"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:textColor="@color/xl_gray_headline" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_line_frame_bg_half">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_duanxin" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#ccc" />
+
+            <EditText
+                android:id="@+id/et_code"
+                style="?android:attr/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint=" 请输入短信验证码"
+                android:includeFontPadding="false"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="6"
+                android:textColor="@color/xl_gray_headline"
+                android:textColorHint="@color/xl_gray"
+                android:textCursorDrawable="@drawable/shape_edittext_cursor_drawable"
+                android:textSize="14sp" />
+
+            <!--<ImageView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="@{mFragment.clear}"-->
+            <!--android:paddingRight="24dp"-->
+            <!--android:src="@mipmap/nav_close"-->
+            <!--android:visibility="@{mFragment.showClear?View.VISIBLE:View.INVISIBLE}" />-->
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/iv_code"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_btn_send"
+            android:text="重新发送"
+            android:textColor="@drawable/selector_btn_text_white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:drawableLeft="@drawable/icon_tishi"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/xl_gray"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_finish"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/selector_btn"
+        android:textColor="@drawable/selector_btn_text_white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/voice_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/ll_agree_rights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="注册即同意 "
+            android:textColor="@color/xl_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_fwxy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="《借款服务与隐私协议》 "
+            android:textColor="@color/xl_blue"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

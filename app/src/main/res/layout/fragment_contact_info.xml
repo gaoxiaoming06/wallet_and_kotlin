@@ -1,0 +1,223 @@
+<LinearLayout android:background="@color/xl_gray_background"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:background="@color/xl_white"
+        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="23dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="亲属关系"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <EditText
+            style="?android:attr/textViewStyle"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_jiantou_right"
+            android:focusable="false"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:id="@+id/tv_qinshu"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:background="@color/xl_gray_fa"
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:background="@color/xl_white"
+        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="23dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="电话号码"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <EditText
+            style="?android:attr/textViewStyle"
+            android:background="@null"
+            android:hint=" 请输入电话号码"
+            android:id="@+id/et_qinshu"
+            android:inputType="number"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:lines="1"
+            android:maxLength="13"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textCursorDrawable="@drawable/shape_edittext_cursor_drawable"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_clear_r"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/icon_close"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv_qinshu"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/rz_icon_lianxiren" />
+    </LinearLayout>
+
+    <TextView
+        android:drawableLeft="@drawable/icon_tishi"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_error_qinshu"
+        android:layout_height="48dp"
+        android:layout_marginLeft="23dp"
+        android:layout_width="match_parent"
+        android:text="请输入正确的电话号码"
+        android:textColor="@color/xl_gray"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:background="@color/xl_white"
+        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="23dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="社会关系"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <EditText
+            style="?android:attr/textViewStyle"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_jiantou_right"
+            android:focusable="false"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:id="@+id/tv_shehui"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:background="@color/xl_gray_fa"
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:background="@color/xl_white"
+        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="23dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="电话号码"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <EditText
+            style="?android:attr/textViewStyle"
+            android:background="@null"
+            android:hint=" 请输入电话号码"
+            android:id="@+id/et_shehui"
+            android:inputType="number"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:lines="1"
+            android:maxLength="13"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textCursorDrawable="@drawable/shape_edittext_cursor_drawable"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_clear_s"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/icon_close"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv_shehui"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/rz_icon_lianxiren" />
+    </LinearLayout>
+
+    <TextView
+        android:drawableLeft="@drawable/icon_tishi"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_error_shehui"
+        android:layout_height="48dp"
+        android:layout_marginLeft="23dp"
+        android:layout_width="match_parent"
+        android:text="请输入正确的电话号码"
+        android:textColor="@color/xl_gray"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:lineSpacingMultiplier="1.7"
+        android:paddingLeft="23dp"
+        android:text="小贴士：\n1.小蓝钱包不会电话审核，请放心填写\n2.信息需真实有效，否则将导致借款失败"
+        android:textColor="@color/xl_gray"
+        android:textSize="12sp" />
+</LinearLayout>

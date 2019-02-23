@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/main_fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.8"
+            android:background="@drawable/pic_bottom_shadow" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="1dp">
+
+        <RadioButton
+            android:id="@+id/btn_1"
+            style="@style/radio_bottom"
+            android:background="#fff"
+            android:checked="true"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/selector_home_tab_loan"
+            android:text="借款"
+            android:textColor="#000" />
+
+        <RadioButton
+            android:id="@+id/btn_2"
+            style="@style/radio_bottom"
+            android:background="#fff"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/selector_home_tab_auth"
+            android:text="认证"
+            android:textColor="#000" />
+
+        <RadioButton
+            android:id="@+id/btn_3"
+            style="@style/radio_bottom"
+            android:background="#fff"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/selector_home_tab_personal"
+            android:text="我的"
+            android:textColor="#000" />
+
+    </RadioGroup>
+</LinearLayout>

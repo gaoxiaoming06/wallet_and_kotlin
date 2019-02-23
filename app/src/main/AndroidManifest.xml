@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xlqianbao.and">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE " />
+
+    <application
+        android:name="com.xlqianbao.and.App"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/DeviceDefault.NoTitleBar.StutasTrans">
+        <activity android:name="com.xlqianbao.and.ui.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.xlqianbao.and.ui.home.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.twotiger.library.utils.versionupgrade.act" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.xlqianbao.and.ui.personal.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.xlqianbao.and.ui.ViewPagerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.xlqianbao.and.ui.WebViewPageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.auth.ContactAuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.auth.id.IdAuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personal.MyNoticesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.personal.OrderRepayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/transparent_bg_act" />
+        <activity
+            android:name=".ui.personal.BankCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/transparent_bg_act" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105987579" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/transparent_bg_act">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sdksample" />
+            </intent-filter>
+        </activity>
+        <!-- TalkingData -->
+        <meta-data
+            android:name="TD_APP_ID"
+            android:value="7185AF935B884ED9B6B7CE2BE6782226" />
+        <meta-data
+            android:name="TD_CHANNEL_ID"
+            android:value="${CHANNEL_VALUE}" />
+        <!-- TalkingData -->
+        <!-- BaiduLBS Service-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="QcshXrslqWzFLsU0lbUtNoBjRzjl8mtk" />
+        <!-- BaiduLBS Service-->
+        <!-- User defined. 用户自定义的广播接收器 -->
+        <receiver
+            android:name=".XlqianbaoPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

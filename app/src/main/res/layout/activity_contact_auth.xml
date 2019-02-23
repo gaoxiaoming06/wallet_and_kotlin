@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xl_gray_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/include_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_auth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/xl_gray_background"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+                android:background="@color/xl_white">
+
+                <ImageView
+                    android:id="@+id/iv_auth_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/rz_pic_moblist" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="24dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_xy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:button="@drawable/selector_contact_auth"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="我同意"
+                    android:textColor="@color/xl_gray_headline"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_xy1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="《通讯录授权协议》"
+                    android:textColor="@color/xl_blue"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text=" "
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_xy2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="《信息收集及使用规则》"
+                    android:textColor="@color/xl_blue"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/selector_btn"
+                android:text="马上授权"
+                android:textColor="@drawable/selector_btn_text_white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:lineSpacingMultiplier="1.5"
+                android:text="温馨提示：\n1.请使用您本人的手机授权。\n2.提供通讯录信息，有助于您通过审核。\n3.小蓝钱包将严格遵循协议，保护用户隐私。"
+                android:textColor="#999"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_auth_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/xl_white"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="36dp"
+                android:drawableTop="@drawable/rz_pic_moblist_s"
+                android:text="通讯录认证成功"
+                android:textColor="@color/xl_gray_headline"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

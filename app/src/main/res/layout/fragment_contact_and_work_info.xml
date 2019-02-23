@@ -1,0 +1,50 @@
+<ScrollView android:background="@color/xl_white"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:background="@color/xl_gray_background"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/include_title_bar" />
+
+        <include
+            android:id="@+id/contact"
+            layout="@layout/fragment_contact_info" />
+
+        <include
+            android:id="@+id/work"
+            layout="@layout/fragment_work_info" />
+
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:background="@drawable/pic_bottom_shadow"
+                android:id="@+id/iv_shadow"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+        </RelativeLayout>
+
+        <Button
+            android:background="@drawable/selector_btn_auth"
+            android:enabled="false"
+            android:id="@+id/btn_submit"
+            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:text="保存"
+            android:textColor="@drawable/selector_btn_text_white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</ScrollView>

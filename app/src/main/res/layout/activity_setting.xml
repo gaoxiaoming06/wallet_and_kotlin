@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xl_gray_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/include_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/selector_item_rl_white"
+        android:gravity="center_vertical"
+        android:onClick="checkUpdate"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="21dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:text="当前版本"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/xl_gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/selector_item_rl_white"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="logout"
+        android:text="安全退出"
+        android:textColor="@color/xl_gray"
+        android:textSize="16sp" />
+</LinearLayout>

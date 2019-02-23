@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "$build_tools_version"
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['java']
+            res.srcDirs = ['res']
+        }
+    }
+
+    buildTypes {
+        debug {}
+        alpha {}
+        release {}
+        release_with_alpha {}
+    }
+}
+
+dependencies {
+//    compile 'com.twotiger.library:common-utils:4'
+    //RxJava RxAndroid
+    compile "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    compile "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+}

@@ -1,0 +1,55 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xl_white"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/xl_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/xl_blue"
+            android:gravity="center"
+            android:text="认证"
+            android:textColor="@color/xl_white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/xl_gray_linear_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="必备认证（点亮图标，借款马上到账）"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <include
+            android:id="@+id/auth_header"
+            layout="@layout/include_auth_header" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/xl_gray_linear_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="可选认证（点亮更多，有助于加快审核速度）"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <include
+            android:id="@+id/auth_footer"
+            layout="@layout/include_auth_footer" />
+    </LinearLayout>
+</ScrollView>

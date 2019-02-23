@@ -1,0 +1,241 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/xl_gray_background"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/header_login"
+                layout="@layout/include_personal_center_header_login" />
+
+            <include
+                android:id="@+id/header_nologin"
+                layout="@layout/include_personal_center_header_nologin" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_over_day"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/xl_gray_background"
+            android:gravity="center"
+            android:textColor="@color/xl_white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_toBankCard"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/selector_item_rl_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="21dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/my_icon_card"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:text="银行卡"
+                android:textColor="@color/xl_gray_headline"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/icon_jiantou_gray"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/xl_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/xl_gray_background" />
+
+        <LinearLayout
+            android:id="@+id/ll_toBorrowRecord"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/selector_item_rl_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="21dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/my_icon_record"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:text="借款记录"
+                android:textColor="@color/xl_gray_headline"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/icon_jiantou_gray"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/xl_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/xl_gray_background" />
+
+        <LinearLayout
+            android:id="@+id/ll_toInviteFriend"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/selector_item_rl_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="21dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/my_icon_share"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:text="邀请好友"
+                android:textColor="@color/xl_gray_headline"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/icon_jiantou_gray"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/xl_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider_2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/xl_gray_background" />
+
+        <LinearLayout
+            android:id="@+id/ll_toMyNotices"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/selector_item_rl_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="21dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/my_icon_news"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:text="我的消息"
+                android:textColor="@color/xl_gray_headline"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_news"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/news"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/icon_jiantou_gray"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/xl_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="@color/xl_gray_background" />
+
+        <LinearLayout
+            android:id="@+id/ll_toSetting"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/selector_item_rl_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="21dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/my_icon_set"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:text="设置"
+                android:textColor="@color/xl_gray_headline"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/icon_jiantou_gray"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/xl_gray"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_wxfwh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/xl_gray_background"
+            android:gravity="center"
+            android:minHeight="64dp"
+            android:text="有问题反馈微信公众号："
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

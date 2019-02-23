@@ -1,0 +1,202 @@
+<LinearLayout android:background="@color/xl_gray_background"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:background="@color/xl_white"
+        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="23dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="职业"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <EditText
+            style="?android:attr/textViewStyle"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_jiantou_down"
+            android:focusable="false"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:id="@+id/tv_zhiye"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/xl_white"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="23dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="月收入"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <EditText
+            style="?android:attr/textViewStyle"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_jiantou_down"
+            android:focusable="false"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:id="@+id/tv_yueshouru"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:background="@color/xl_gray_fa"
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:background="@color/xl_white"
+        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="23dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="84dp"
+            android:text="单位名称"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <EditText
+            style="?android:attr/textViewStyle"
+            android:background="@null"
+            android:hint=" 如：朝阳区潘家园"
+            android:id="@+id/et_name"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:lines="2"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textCursorDrawable="@drawable/shape_edittext_cursor_drawable"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/xl_gray_fa"
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:background="@color/xl_white"
+        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="23dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="84dp"
+            android:text="单位所在地"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <EditText
+            style="?android:attr/textViewStyle"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_jiantou_down"
+            android:focusable="false"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:id="@+id/tv_suozaidi"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:lines="2"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:background="@color/xl_gray_fa"
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:background="@color/xl_white"
+        android:layout_height="64dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="23dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_width="84dp"
+            android:text="单位电话"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <EditText
+            style="?android:attr/textViewStyle"
+            android:background="@null"
+            android:hint=" 区号+号码 (选填)"
+            android:id="@+id/et_no"
+            android:inputType="number"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:lines="1"
+            android:maxLength="11"
+            android:textColor="@color/xl_gray_headline"
+            android:textColorHint="@color/xl_gray"
+            android:textCursorDrawable="@drawable/shape_edittext_cursor_drawable"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_width="match_parent"
+        android:lineSpacingMultiplier="1.7"
+        android:paddingLeft="23dp"
+        android:text="小贴士：\n1.保证隐私安全，不会与您所在单位联系\n2.请根据您实际情况如实填写"
+        android:textColor="@color/xl_gray"
+        android:textSize="12sp" />
+</LinearLayout>

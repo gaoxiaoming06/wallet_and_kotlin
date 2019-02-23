@@ -1,0 +1,221 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:looplayout="http://schemas.android.com/apk/res-auto"
+    xmlns:ruler="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xl_white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/xl_blue"
+        android:padding="16dp"
+        android:src="@drawable/logo_xiaolan" />
+
+    <RelativeLayout
+        android:id="@+id/rl_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_logo">
+
+        <com.twotiger.library.ui.looplayout.ViewpagerWithIndicator
+            android:id="@+id/vp_wi"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            looplayout:defaultBackground="@drawable/banner_default"
+            looplayout:indicatorPosition="center"
+            looplayout:isAutoPlay="true"
+            looplayout:loopInterval="5000" />
+
+        <TextView
+            android:id="@+id/tv_over_day"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:alpha="0.7"
+            android:background="@color/xl_red"
+            android:gravity="center"
+            android:textColor="@color/xl_white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/xl_blue"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/loan_marginTop_1"
+            android:text="请选择借款金额（元）"
+            android:textColor="#4dffffff"
+            android:textSize="@dimen/loan_ruler_money_text_size_1" />
+
+        <TextView
+            android:id="@+id/red_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/xl_white"
+            android:textSize="@dimen/loan_money_size" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:background="@drawable/shape_dotted_line"
+            android:layerType="software" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/loan_marginTop_2"
+            android:text=""
+            android:textColor="#4dffffff"
+            android:textSize="@dimen/loan_ruler_money_text_size_2"
+            android:visibility="invisible" />
+
+        <com.xlqianbao.and.view.RulerMoney
+            android:id="@+id/ruler_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/xl_blue"
+            ruler:mask_bg="@null"
+            ruler:showScaleValue="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="请选择借款天数"
+            android:textColor="#999"
+            android:textSize="@dimen/loan_ruler_money_text_size_1" />
+
+        <com.xlqianbao.and.view.RulerDays
+            android:id="@+id/ruler_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/xl_white"
+            ruler:mask_bg="@null"
+            ruler:showScaleValue="true" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/loan_bottom_text_margin"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="@dimen/loan_bottom_text_margin"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="到账金额"
+                android:textColor="@color/xl_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="手续费用"
+                android:textColor="@color/xl_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="借款天数"
+                android:textColor="@color/xl_gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_weight="1"
+                android:textColor="@color/xl_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_fee"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/xl_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_days"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/xl_gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/loan_btn_marginBottom"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/selector_btn"
+        android:text="立即借钱"
+        android:textColor="@drawable/selector_btn_text_white"
+        android:textSize="16sp" />
+</LinearLayout>

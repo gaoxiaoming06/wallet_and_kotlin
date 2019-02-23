@@ -1,0 +1,233 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/xl_white"
+    android:orientation="vertical"
+    android:paddingBottom="21dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/xl_gray_background" />
+
+    <LinearLayout
+        android:id="@+id/ll_toTxlAF"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@drawable/selector_item_rl_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <ImageView
+            android:id="@+id/iv_txl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/rz_list_moblist" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="通讯录认证"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_jiantou_gray"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/xl_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/xl_gray_background" />
+
+    <LinearLayout
+        android:id="@+id/ll_toZhimaAF"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@drawable/selector_item_rl_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <ImageView
+            android:id="@+id/iv_zhima"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/rz_list_zhima" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="芝麻信用"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_jiantou_gray"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/xl_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/xl_gray_background" />
+
+    <LinearLayout
+        android:id="@+id/ll_toWxAF"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@drawable/selector_item_rl_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_wx"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/rz_list_wx" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="微信认证"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_jiantou_gray"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/xl_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/xl_gray_background"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_toAlipayAF"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@drawable/selector_item_rl_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_zfb"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/rz_list_zfb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="支付宝认证"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_jiantou_gray"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/xl_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/xl_gray_background"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_toJdAF"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@drawable/selector_item_rl_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_jd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/rz_list_jd" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="京东认证"
+            android:textColor="@color/xl_gray_headline"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_jiantou_gray"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/xl_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/xl_gray_background"
+        android:visibility="gone" />
+</LinearLayout>

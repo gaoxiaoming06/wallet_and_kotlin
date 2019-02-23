@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主题默认色值-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+    <!-- 小蓝通用色值 -->
+    <color name="xl_blue">#5f8bf3</color>
+    <color name="xl_red">#ff6666</color>
+    <color name="xl_blue_h">#4f7eeb</color>
+    <color name="xl_blue_gray">#a4bfff</color>
+    <color name="xl_white">#ffffff</color>
+    <color name="xl_black">#000000</color>
+    <color name="xl_green">#80d36d</color>
+    <color name="xl_gray_ddd">#dddddd</color>
+    <color name="xl_gray">#aaaaaa</color>
+    <color name="xl_gray_bc">#bcbcbc</color>
+    <color name="xl_gray_headline">#555555</color>
+    <color name="xl_gray_background">#f0f0f0</color>
+    <color name="xl_gray_fa">#fafafa</color>
+    <color name="xl_gray_linear_bg">#f8f8f8</color>
+    <color name="xl_ccc">#cccccc</color>
+    <color name="xl_line">#e3e3e3</color>
+    <color name="xl_auth">#eef3ff</color>
+    <color name="xl_auth_h">#e0e9ff</color>
+    <color name="xl_transparent_bg">#b3000000</color><!--黑色透明背景-->
+    <!--bank cards bg-->
+    <color name="bank_cib">#3649d4</color>
+    <color name="bank_cmbc">#3649d4</color>
+    <color name="bank_abc">#009174</color>
+    <color name="bank_cmb">#ff523c</color>
+    <color name="bank_pab">#ff6927</color>
+    <color name="bank_citic">#ff381f</color>
+    <color name="bank_boc">#de252c</color>
+    <color name="bank_icbc">#ff462f</color>
+    <color name="bank_spdb">#3438c4</color>
+    <color name="bank_ccb">#3d41dd</color>
+    <color name="bank_bob">#f73a3a</color>
+    <color name="bank_psbc">#03b64b</color>
+    <color name="bank_cgb">#ff523c</color>
+    <color name="bank_ceb">#6a1684</color>
+
+    <color name="black">#000000</color>
+</resources>
